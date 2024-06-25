@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="voitures.html">Voitures</a></li>
+        <li><a href="reservation.html">Réservation</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <section id="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contact-form">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Envoyer</button>
+    </form>
+    
+    <div id="contact-info">
+      <h3>Coordonnées</h3>
+      <p><strong>Téléphone :</strong> +25762239130</p>
+      <p><strong>Email :</strong> iradukundalionel7@gmail.com</p>
+      
+      <h3>Réseaux sociaux</h3>
+      <ul>
+        <li><a href="https://www.facebook.com/votrepage" target="_blank">Facebook</a></li>
+        <li><a href="https://www.whatsapp.com/+25762239130" target="_blank">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/votrecompte" target="_blank">Instagram</a></li>
+      </ul>
+      
+      <p><a href="politique.html">Politique de confidentialité</a></p>
+    </div>
+  </section>
+  
+  <footer>
+    <p>Tous droits réservés &copy; 2024 location de Voiture</p>
+  </footer>
+  
+  <script> document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault(); // Empêche le rechargement de la page
+
+    // Affiche le message de confirmation
+    var confirmationMessage = document.createElement("p");
+    confirmationMessage.textContent =
+      "Votre message a été envoyé avec succès ! Nous vous contacterons bientôt.";
+    confirmationMessage.style.color = "green";
+    document.getElementById("contact.html").appendChild(confirmationMessage);
+
+    // Réinitialise le formulaire
+    document.getElementById("contact-form").reset();
+  });
+</script>
+</body>
+</html>
